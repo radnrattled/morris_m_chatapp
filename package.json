@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/radnrattled/morris_m_chatapp#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "socket.io": "^3.1.0"
   }
 }
