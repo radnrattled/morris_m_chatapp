@@ -1,6 +1,8 @@
 const express = require('express');
 const path = require('path');
 
+const messenger = require('socket.io')();
+
 const app = express();
 
 app.use(express.static("public"));
@@ -13,6 +15,8 @@ app.get("/chat", (req, res) => {
     res.sendFile(path.join(__dirname, "chat.html"));
 });
 
-app.listen(port, () => {
+const server = app.listen(port, () => {
     console.log(`app is running on ${port}`);
 });
+
+messenger.attach(server);
