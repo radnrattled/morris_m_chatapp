@@ -1,0 +1,24 @@
+{
+  "name": "morris_m_chatapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-dev": "nodemon app & browser-sync start --proxy 'localhost:3000' --files 'index.html' 'public'",
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/radnrattled/morris_m_chatapp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/radnrattled/morris_m_chatapp/issues"
+  },
+  "homepage": "https://github.com/radnrattled/morris_m_chatapp#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
