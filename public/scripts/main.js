@@ -13,7 +13,7 @@ import ChatMessage from "./components/TheMessageComponent.js";
     }
 
     function appendMessage(message) {
-        debugger;
+      
         vm.messages.push(message);
     }
 
@@ -31,7 +31,7 @@ import ChatMessage from "./components/TheMessageComponent.js";
 
         methods: {
             dispatchMessage(){
-                socket.emit('chatmessage', {content: this.message, name: this.nickname || 'Anonymous'})
+                socket.emit('chatmessage', {content: this.message, name: this.nickname || 'Secret Hooter'})
             this.message = "";
             }
         },

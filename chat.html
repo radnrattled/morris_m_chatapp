@@ -10,6 +10,7 @@
     <main id="app">
         <h2 class="title">Type to start chatting!</h2>
 <section class="messages">
+    <div class="typing"></div>
     <ul id="messages" v-for="message in messages">
         <newmessage :msg="message" :socketid="socketID"></newmessage>
     </ul>
