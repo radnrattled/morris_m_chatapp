@@ -32,6 +32,7 @@ import ChatMessage from "./components/TheMessageComponent.js";
         methods: {
             dispatchMessage(){
                 socket.emit('chatmessage', {content: this.message, name: this.nickname || 'Anonymous'})
+            this.message = "";
             }
         },
 
