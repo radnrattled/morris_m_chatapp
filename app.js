@@ -29,6 +29,15 @@ messenger.on("connection", (socket) => {
         console.log(msg);
         messenger.emit('message', { id: socket.id, message: msg });
     });
+    // attempt at typing
+    //calling on the div in the html with the class of typing - if there is text in the box (true) the display the typing notification in that div - if not display nothing.
+    socket.on('display', (data)=>{
+        if(data.typing==true)
+          $('.typing').text(`someone is hooting`)
+        else
+          $('.typing').text("")
+      })
+    
     socket.on('disconnect', () =>{
         console.log('a user has disconnected');
     })

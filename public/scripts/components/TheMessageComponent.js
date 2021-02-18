@@ -3,17 +3,17 @@ export default {
 
     template: 
     `
-    <article class="new-message" :class="{ 'my message' : matchedID}">
-
-    <h1>This is a message</h1>
+    <article class="new-message" :class="{ 'my-message' : matchedID }">
     <h4>{{msg.message.name}} says:</h4>
     <p>{{msg.message.content}}</p>
     </article>
     `,
 
+   
+
     data: function() {
         return {
-            matchedID: thissocketid == this.msg.id
+            matchedID: this.socketid == this.msg.id
         }
     }
 }
